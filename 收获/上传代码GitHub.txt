@@ -1,0 +1,4 @@
+1.   git init   //新建一个仓库
+2.   git add .  //将项目添加至仓库中
+3.   git commit -m "注释"   //
+4.

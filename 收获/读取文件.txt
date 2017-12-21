@@ -1,0 +1,8 @@
+读取文件分为三步：
+1.FILE *fp=fopen("data.txt",'r');
+2.有三种方法读取文件：fscanf(fp,"%d",num),fgets(buff,255,fp),fread(buff,1,24,fp).
+
+	注意：1.fscanf遇到空格或者换行时结束
+	      2.fgets遇到换行时结束
+	      3.fread读取相对应的字符串。
+3.fclose(fp)

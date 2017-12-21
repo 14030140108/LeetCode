@@ -1,0 +1,34 @@
+1.在c++中!(0)==1，其他!(非零数)==0。
+2.*p不为空的时候 while（*p）中的*p为1,否则为0；
+3.strcmp的实现：
+
+第一种方法：
+
+int strcmp(char *str1,char *str2){
+	while(*str1==*str2){
+		if(*str1=='\0')
+		return 0;
+		*str1++;
+		*str2++;
+	}
+	return *str1-*str2;
+}
+	
+第二种方法：
+
+int strcmp1(char *str1,char *str2){
+	int x;
+	while(!(x=*str1-*str2)&&*str1){
+		*str1++;
+		*str2++;
+	}
+	if(x>0)
+	x=1;
+	if(x<0)
+	x=-1;
+	return x; 
+}
+
+在第二种方法中，while中的&&*str1是str1和str2相等的时候，并且两个逻辑条件不能对调。
+
+3. 	sscanf(&s[0],"%d",int &v)        //把字符串按照一定的转换格式成另一个数据类型
